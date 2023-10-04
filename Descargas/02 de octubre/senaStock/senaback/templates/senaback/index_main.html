@@ -1,0 +1,90 @@
+
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Styles -->
+    <link href="{% static "senaback/css/estilo2.css" %}" rel="stylesheet">
+    {% block css %}
+        
+    {% endblock css %}
+
+</head>
+<body>
+    <header id="main-header">
+        <div class="horizontal">
+            <div class="logo">
+                <img src="{% static 'senaback/img/logo-sena.svg'%}" alt="">
+            </div>
+            <div class="info-centro">
+                <a href="{% url "index" %}">  <h1>Sistema de Gestión de Inventario</h1> </a>
+            </div>
+            <div id="sesion">
+                <a href="{% url "login" %}">
+                    <div id="cerrar-sesion-img">
+                        <img src="{% static 'senaback/img/cerrar-sesion.svg' %}" alt="">
+                    </div>
+                    <p>Cerrar Sesión</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav id="botones-nav">
+        <ul>
+            <li><div class="icono"><img src="{% static 'senaback/img/inventarios.svg' %}"></div><a href="#">Inventarios</a>
+                <ul>
+                    <li><a href="#">Crear elementos</a></li>
+                    <li><a href="{% url "Listar_Consumibles" %}">Listar Elementos Consumibles</a></li>
+                    <li><a href="#">Listar Elementos Devolutivos</a></li>
+                    <!-- <li><a href="#">Listar usuario</a></li> -->
+                </ul>
+            </li>
+            <li><div class="icono"><img src="{% static 'senaback/img/consumible.svg' %}"></div><a href="#">Consumibles</a>
+                <ul>
+                    
+                    <li><a href="#">Crear elementos</a></li>
+                    <!-- <li><a href="#">Editar elementos</a></li> -->
+                    <li><a href="#">Editar Consumible</a></li>
+                    <li><a href="#">Listar Consumibles</a></li>
+                </ul>
+            </li>
+            <li><div class="icono"><img src="{% static 'senaback/img/transacciones.svg' %}"></div><a href="#">Transacciones</a>
+                <ul>
+                    <li><a href="#">otorgar elemento</a></li>
+                    <li><a href="#">Listar transacciones</a></li>
+                    <!-- <li><a href="#">Consultar transacción</a></li> -->
+                </ul>
+            </li>
+            <li><div class="icono"><img src="{% static 'senaback/img/opciones.svg' %}"></div><a href="#">Opciones</a>
+                <ul>
+                    <li><a href="#">Ver perfil</a></li>
+                    {% comment %} <li><a href="#">Editar perfil</a></li> {% endcomment %}
+                    <li><a href="{% url "login" %}">Cerrar Sesión</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    {% block content %}
+    
+    
+    
+    {% endblock content %}
+    <footer id="main-footer">
+        <div class="horizontal">
+            <div>
+
+            </div>
+            <div id="footer-info">
+                <p>Copyright 2023</p>
+                <p>Servicio Nacional de Aprendizaje - SENA</p>
+                <p>Tel: 300 800 4050</p>
+            </div>
+            <div class="logo">
+                <img src="{% static 'senaback/img/logo-sena.svg'%}" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

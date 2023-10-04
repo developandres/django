@@ -1,0 +1,44 @@
+
+<link href="{% static 'senaback/css/stylesmain.css' %}" rel="stylesheet">
+
+{% load static %}
+
+<!--                     Editar ELEMENTOS               -->
+            <div>
+                <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>
+                <p>Editar elemento.</p><br>
+                <hr><br>
+                <label for="username">Elemento</label>
+                <input type="text" id="username" name="username"><br>
+                <label for="descripcion">Descripción:</label><br>
+                <textarea id="descripcions" name="descripcion" rows="5" placeholder="Escribe una descripción"></textarea>  
+                <label for="placa-sena">Placa sena:</label>
+                <input type="text" id="placa-sena" name="placa-sena"><br>
+                <label for="serial">Serial:</label>
+                <input type="text" id="serial" name="serial"><br>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad"><br>
+                <label for="tipo-elemento">Tipo de elemento:</label>
+                <select id="tipo-elemento" name="tipo-elemento">
+                    <option value="C.C.">Consumible</option>
+                    <option value="P.E.P.">Devolutivo</option>
+                </select><br>
+                <label for="valor">Valor unitario:</label>
+                <input type="text" id="valor" name="valor"><br>
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="C.C."></option>
+                    <option value="P.E.P."></option>
+                </select><br>
+                <form id="imageUploadForm" enctype="multipart/form-data">
+                    <label for="imagen">imagen:</label>
+                    <input type="file" id="imagen" accept="image/*" name="image" />
+                </form>  
+                <div class="botones-container">  
+                <button class="btn-guardar" id="btn-no-guardar">Cancelar</button>
+                <button class="btn-no-guardar" id="btn-guardar">Guardar</button>
+                </div>
+                </div>
+            </div>
+            <script src="{% static "senaback/js/script3.js" %}"></script>

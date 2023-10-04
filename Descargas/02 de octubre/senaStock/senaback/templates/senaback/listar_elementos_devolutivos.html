@@ -1,0 +1,112 @@
+
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Styles -->
+    <link href="{% static 'senaback/css/styleindex.css' %}" rel="stylesheet">
+    {% comment %} <link href="{% static 'senaback/css/styles.css' %}"> {% endcomment %}
+</head>
+<body>
+
+<!--                                  La tabla de fondo                                                             -->
+<section>
+    <div id="titulo">
+            <h1>Inventario de Elementos Devolutivos</h1>
+        <div id="filtrar">
+            <input type="text" placeholder="Filtrar por...">
+            <div id="buscar">
+                <img src="buscar.svg">
+            </div>
+        </div>
+    </div>
+
+        <table id="prueba-tabla">
+            <tr id="tabla-titulo">
+                <th><h4>ID</h4></th>
+                <th><h4>Elemento</h4></th>
+                <th><h4>Modelo</h4></th>
+                <th><h4>Placa SENA</h4></th>
+                <th><h4>Serial</h4></th>
+                <th><h4>Cantidad</h4></th>
+                <th><h4>Cantidad disponible</h4></th>
+                <th><h4>Descripcion</h4></th>
+                <th><h4>Valor</h4></th>
+                <th><h4>Valor total</h4></th>
+                <th><h4>Garantia</h4></th>
+                <th><h4>Estado</h4></th>
+                <th><h4>Acciones</h4></th>
+            </tr>
+            <tr class="tabla-contenido">
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th>
+                    <div class="tabla-contenido-boton">
+                        <a href="#">
+                            <img src="{% static 'senaback/img/editar.svg'}" alt="">                        </a>
+                    </div>
+                    <div class="tabla-contenido-boton">
+                        <a href="#">
+                            <img src="buscar.svg" alt="">
+                        </a>
+                    </div>
+                </th>
+            </tr>
+            <tr class="tabla-contenido">
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th>
+                    <div class="tabla-contenido-boton">
+                        <a href="#">
+                            <img src="editar.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="tabla-contenido-boton">
+                        <a href="#">
+                            <img src="buscar.svg" alt="">
+                        </a>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </section>
+    <footer id="main-footer">
+        <div class="horizontal">
+            <div>
+
+            </div>
+            <div id="footer-info">
+                <p>Copyright 2023</p>
+                <p>Servicio Nacional de Aprendizaje - SENA</p>
+                <p>Tel: 300 800 4050</p>
+            </div>
+            <div class="logo">
+                <img src="{% static 'senaback/img/logo-sena.svg' %}" alt="">
+            </div>
+        </div>
+    </footer>
+    <script src="{% static "senaback/js/script3.js" %}"></script>
+</body>
+</html>

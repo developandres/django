@@ -1,0 +1,115 @@
+
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Styles -->
+    <link href="{% static 'senaback/css/estilo_index.css' %}" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/24f8ed5638.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div id="titulo">
+            <div></div>
+            <h1>Lista de Entregas</h1>
+            <div id="filtrar">
+                <input type="text" placeholder="Filtrar por...">
+                <div id="buscar">
+                    <img src="img/buscar.svg">
+                </div>
+            </div>
+        </div>
+<body>
+        <table>
+            <tr id="tabla-titulo">
+                <th><h4>ID</h4></th>
+                <th><h4>Elemento</h4></th>
+                <th><h4>Responsable</h4></th>
+                <th><h4>Quien otorgo</h4></th>
+                <th><h4>Cantidad</h4></th>
+                <th><h4>Fecha de entrega</h4></th>
+                <th><h4>Acciones</h4></th>
+            </tr>
+            <tr class="tabla-contenido">
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th>
+                    <div class="tabla-contenido-boton">
+                        <a href="#">
+                            <img src="img/editar.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="tabla-contenido-boton">
+                        <a href="#">
+                            <img src="img/buscar.svg" alt="">
+                        </a>
+                    </div>
+                </th>
+            </tr>
+            <tr class="tabla-contenido">
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th><p>Ejemplo</p></th>
+                <th>
+                    <div class="tabla-contenido-boton">
+                        <a href="#">
+                            <img src="img/editar.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="tabla-contenido-boton">
+                        <a href="#">
+                            <img src="img/buscar.svg" alt="">
+                        </a>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </section>
+    <section id="botones-seccion">
+        <a href="#">
+            <div class="inventario-boton">
+                <h3>Préstamos Próximos a Vencer</h3>
+            </div>
+        </a>
+            <div class="btn">
+                <div class="calendario">
+                    <div class="box-calendar">
+                        <a href="calendario/calendar.html"><i class="fa-regular fa-calendar-days"; style="color: #fff; font-size: 30px;"></i></a>
+    
+                    </div>
+                </div>
+                <div class="reporte">
+                    <div class="a-report">
+                        <a href=""><i class="fa-regular fa-file" style="color: #fff; font-size: 30px;"></i></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer id="main-footer">
+        <div class="horizontal">
+            <div>
+
+            </div>
+            <div id="footer-info">
+                <p>Copyright 2023</p>
+                <p>Servicio Nacional de Aprendizaje - SENA</p>
+                <p>Tel: 300 800 4050</p>
+            </div>
+            <div class="logo">
+                <img src="{% static 'senaback/img/logo-sena.svg'%}" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

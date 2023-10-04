@@ -1,0 +1,117 @@
+
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Elemento</title>
+    <!-- Styles -->
+    <link href="{% static 'senaback/css/estilito.css' %}" rel="stylesheet"> 
+    <link href="{% static 'senaback/css/estilo_index.css' %}" rel="stylesheet">
+</head>
+<body>
+  <!--             NAVBAR             -->
+    <header id="main-header">
+        <div class="horizontal">
+            <div class="logo">
+                <img src="{% static 'senaback/img/logo-sena.png' %}" alt="">
+            </div>
+            <div class="info-centro">
+                <h1><a href="{% url 'index' %}" id="boton_index">Sistema de Gestión de Inventario</a></h1>
+            </div>
+            <div id="sesion">
+                <a href="{% url 'login' %}">
+                    <div id="cerrar-sesion-img">
+                        <img src="{% static 'senaback/img/cerrar-sesion.svg' %}" alt="">
+                    </div>
+                    <p>Cerrar Sesión</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav id="botones-nav">
+        <ul>
+            <li><div class="icono"><img src="{% static 'senaback/img/inventarios.svg' %}"></div><a href="#">Inventarios</a>
+                <ul>
+                    
+                    <li><a href="{% url 'crear_elemento' %}">Crear elementos</a></li>
+                    <li><a href="seccion/editar_elemento/editarelemento.html">Editar elemento</a></li>
+                    <li><a href="#">Visualizar elemento</a></li>
+                    <li><a href="index.html">Listar elementos</a></li>
+                </ul>
+            </li>
+            <li><div class="icono"><img src="{% static 'senaback/img/transacciones.svg' %}"></div><a href="#" >Transacciones</a>
+                <ul>
+                    <li><a href="Elementos/otorgar_prestamo/otorgar_elemento.html" id="transacciones">Otorgar elemento</a></li>
+                    <li><a href="Elementos/finalizar Prestamo/finalizar_prestamo.html">Anular préstamo</a></li>
+                    <li><a href="Elementos/Ficha de Prestamo Devolutivo/visualizar.html">Consultar transacción</a></li>
+                    <li><a href="listar transacciones/index.html">Listar transacciones</a></li>
+                </ul>
+            </li>
+            <li><div class="icono"><img src="{% static 'senaback/img/opciones.svg' %}"></div><a href="#">Opciones</a>
+                <ul>
+                    <li><a href="#">Ver perfil</a></li>
+                    <!-- <li><a href="#">Editar perfil</a></li> -->
+                    <li><a href="{% url 'login' %}">Cerrar Sesión</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!--           CREAR ELEMENTO            -->
+
+<div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <p>Registrar elemento.</p><br>
+      <hr><br>
+      <label for="username">Elemento</label>
+      <input type="text" id="username" name="username"><br>
+      <label for="descripcion">Descripción:</label><br>
+      <textarea id="descripcions" name="descripcion" rows="5" placeholder="Escribe una descripción"></textarea>  
+      <label for="placa-sena">Placa sena:</label>
+      <input type="text" id="placa-sena" name="placa-sena"><br>
+      <label for="serial">Serial:</label>
+      <input type="text" id="serial" name="serial"><br>
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" name="cantidad"><br>
+      <label for="tipo-elemento">Tipo de elemento:</label>
+      <select id="tipo-elemento" name="tipo-elemento">
+        <option value="C.C.">Consumible</option>
+        <option value="P.E.P.">Devolutivo</option>
+      </select><br>
+      <label for="valor">Valor unitario:</label>
+      <input type="text" id="valor" name="valor"><br>
+      <label for="estado">Estado:</label>
+      <select id="estado" name="estado">
+        <option value="C.C."></option>
+        <option value="P.E.P."></option>
+      </select><br>
+      <form id="imageUploadForm" enctype="multipart/form-data">
+        <label for="imagen">imagen:</label>
+        <input type="file" id="imagen" accept="image/*" name="image" />
+    </form>  
+      <div class="botones-container">  
+      <button class="btn-guardar" id="btn-no-guardar">Cancelar</button>
+      <button class="btn-no-guardar" id="btn-guardar">Guardar</button>
+    </div>
+    </div>
+  </div>
+
+  <!--         FOOTER           -->
+
+<footer id="main-footer">
+    <div class="horizontal">
+        <div id="footer-info">
+            <p>Copyright 2023</p>
+            <p>Servicio Nacional de Aprendizaje - SENA</p>
+            <p>Tel: 300 800 4050</p>
+        </div>
+        <div class="logo">
+            <img src="{% static 'senaback/img/logo-sena.png' %}" alt="">
+        </div>
+    </div>
+</footer>
+
+<script src="{% static 'senaback/js/Script.js' %}"></script>
+</body>
+</html>
